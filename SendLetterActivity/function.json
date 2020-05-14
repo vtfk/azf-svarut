@@ -1,0 +1,9 @@
+{
+  "bindings": [
+    {
+      "name": "letter",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}

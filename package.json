@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "func start"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/vtfk/svarut#readme",
   "dependencies": {
-    "@vtfk/svarut": "1.1.1"
+    "@vtfk/svarut": "1.1.1",
+    "durable-functions": "1.4.1"
+  },
+  "devDependencies": {
+    "standard": "14.3.4"
   }
 }
