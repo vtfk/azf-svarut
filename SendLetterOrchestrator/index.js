@@ -7,5 +7,7 @@ module.exports = df.orchestrator(function * (context) {
 
   const retryOptions = new df.RetryOptions(RETRY.WAIT, RETRY.ATTEMPTS)
   const response = yield context.df.callActivityWithRetry('SendLetterActivity', retryOptions, letter)
+  context.df.setCustomStatus(response.errorcode ? 'Failed' : 'Succeeded')
+
   return response
 })
