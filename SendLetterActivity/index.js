@@ -10,6 +10,7 @@ module.exports = async function (context) {
     return response
   } catch (error) {
     context.log(JSON.stringify(error, null, 2))
+    delete error.config.auth
     return error
   }
 }
