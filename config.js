@@ -5,7 +5,7 @@ module.exports = {
     url: process.env.SVARUT_URL
   },
   RETRY: {
-    ATTEMPTS: process.env.RETRY_ATTEMPTS || 5,
-    WAIT: process.env.RETRY_WAIT || 10000
+    ATTEMPTS: parseInt(process.env.RETRY_ATTEMPTS) || 5,
+    WAIT: parseInt(process.env.RETRY_WAIT) || 10000
   }
 }
