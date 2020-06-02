@@ -3,7 +3,7 @@ const { RETRY } = require('../config')
 
 module.exports = df.orchestrator(function * (context) {
   const letter = context.df.getInput()
-  context.log('Orchestrator triggered!', letter)
+  context.log('Orchestrator triggered!')
 
   const retryOptions = new df.RetryOptions(RETRY.WAIT, RETRY.ATTEMPTS)
   const response = yield context.df.callActivityWithRetry('SendLetterActivity', retryOptions, letter)
