@@ -3,7 +3,7 @@ const svarut = require('@vtfk/svarut')(config.SVARUT)
 
 module.exports = async function (context) {
   const { letter } = context.bindings
-  context.log("Starting activity!")
+  context.log('Starting activity!')
 
   try {
     if (Array.isArray(letter.mottaker)) {
