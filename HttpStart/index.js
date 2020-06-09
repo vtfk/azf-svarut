@@ -1,4 +1,5 @@
-﻿const df = require('durable-functions')
+const df = require('durable-functions')
+const getStatusResponse = require('../lib/get-status-response')
 
 module.exports = async function (context, req) {
   const client = df.getClient(context)
@@ -6,5 +7,5 @@ module.exports = async function (context, req) {
 
   context.log(`Started orchestration with ID = '${instanceId}'.`)
 
-  return client.createCheckStatusResponse(context.bindingData.req, instanceId)
+  return getStatusResponse(client, instanceId)
 }
