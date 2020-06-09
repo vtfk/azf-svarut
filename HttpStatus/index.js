@@ -11,5 +11,5 @@ module.exports = async function (context, req) {
     delete status.input
   }
 
-  context.res = status ? { body: status } : getStatusResponse(client, instanceId)
+  context.res = status ? { body: status } : getStatusResponse(req, client, instanceId)
 }

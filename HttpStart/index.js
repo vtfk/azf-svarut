@@ -7,5 +7,5 @@ module.exports = async function (context, req) {
 
   context.log(`Started orchestration with ID = '${instanceId}'.`)
 
-  return getStatusResponse(client, instanceId)
+  return getStatusResponse(req, client, instanceId)
 }
