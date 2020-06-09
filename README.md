@@ -257,9 +257,12 @@ $ func azure functionapp publish prod-func-svarut
     [...]
 ```
 
+<img align="right" width="170" src="https://media.giphy.com/media/3imL7OcAU0awo/giphy.gif" />
+
 The function returns a couple of URLs you can use to test your function, so go a head and do that - can't wait to hear how it went! :tada:
 
 Remember to replace the functionname in the ``HttpStart`` function to ``SendLetter`` as described [here](#incoming_envelope-send-new-letter---apisendletter)!
+
 
 ## :page_with_curl: License
 
