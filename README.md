@@ -138,7 +138,7 @@ When you are ready to publish the function to Azure, first make sure that you ha
 
 If you haven't created a Function App in Azure yet, you can run these commands to get you started ASAP! Each command provides JSON output upon completion.
 
-Jump down to ["publish to existing Azure resources"](#publish-to-existing-azure-resources) if you already have the resources that is ready for action created!
+[:point_down: Jump down to deploy the Function App if you already have the resources created!](#package-deploy-the-function-app-to-azure)
 
 #### Logging in to the Azure CLI
 
@@ -251,7 +251,7 @@ $ func azure functionapp publish prod-func-svarut
 
 The function returns a couple of URLs you can use to test your function, so go a head and do that - can't wait to hear how it went! :tada: 
 
-Remember to replace the functionname in the ``HttpStart`` function to ``SendLetter`` as described [here](#apisendletter---send-new-letter)!
+Remember to replace the functionname in the ``HttpStart`` function to ``SendLetter`` as described [here](#incoming_envelope-send-new-letter---apisendletter)!
 
 ## :page_with_curl: License
 
