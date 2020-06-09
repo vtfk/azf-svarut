@@ -255,4 +255,4 @@ Remember to replace the functionname in the ``HttpStart`` function to ``SendLett
 
 ## :page_with_curl: License
 
-[MIT]() 
+[MIT](https://github.com/vtfk/azf-svarut/blob/master/LICENSE)
