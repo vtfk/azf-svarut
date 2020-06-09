@@ -12,4 +12,9 @@ module.exports = async function (context, req) {
   }
 
   context.res = status ? { body: status } : getStatusResponse(req, client, instanceId)
+
+  // Orchestrator is either running, og pending - return 202
+  if (status && ['Running', 'Pending'].includes(status.runtimeStatus)) {
+    context.res = { ...getStatusResponse(req, client, instanceId), body: status }
+  }
 }
