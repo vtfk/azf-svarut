@@ -2,7 +2,18 @@
 
 Durable Azure function that sends letters to [KS SvarUT](https://svarut.ks.no/public/ks-svarut.html).
 
-The letter schema can be found [here](https://github.com/vtfk/svarut/blob/master/src/schemas/forsendelse.json).
+## :blue_book: Table of contents
+
+* [API Endpoints](#v-api)
+  * [Send new letter - ``/api/SendLetter``](#incoming_envelope-send-new-letter---apisendletter)
+  * [Get letter status - ``/api/status/{instanceId}``](#white_check_mark-get-letter-status---apistatusinstanceid)
+* [Local Development](#computer-local-development)
+* [Publish function app to Azure](#rocket-publish-azure-function)
+  * [Create Azure resources](#hammer-create-azure-resources)
+  * [Deploy function app](#package-deploy-the-function-app-to-azure)
+* [License](#page_with_curl-license)
+
+***
 
 ## :v: API
 
@@ -12,12 +23,11 @@ Starts the letter orchestrator that sends the provided letter.
 
 #### Example
 
-**POST** ``http://localhost:7071/api/SendLetter?code=appKey``
+Please send the letter as described in the schema as the request body. The letter schema can be found [here](https://github.com/vtfk/svarut/blob/master/src/schemas/forsendelse.json).
 
-Please send the letter as described in the [schema](https://github.com/vtfk/svarut/blob/master/src/schemas/forsendelse.json) as the request body.
-Examples can be found [here](https://github.com/vtfk/svarut#sendforsendelse-simple).
+> More examples can be found [here](https://github.com/vtfk/svarut#sendforsendelse-simple).
 
-Response:
+**POST** ``http://localhost:7071/api/SendLetter?code=appKey``:
 
 ```json
 {
@@ -45,9 +55,7 @@ Returns ``201 Accepted`` (with `Location` and `Retry-After` headers) if the  act
 
 #### Example
 
-**GET** ``http://localhost:7071/api/status/{instanceId}?code=appKey``
-
-Example response:
+**GET** ``http://localhost:7071/api/status/{instanceId}?code=appKey``:
 
 ```json
 {
@@ -130,7 +138,7 @@ To setup local development, please clone this repository, and install the depenc
 
 6. Profit :money_with_wings:
 
-## :rocket: Publish to Azure functions
+## :rocket: Publish Azure function
 
 When you are ready to publish the function to Azure, first make sure that you have the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed on your device.
 
