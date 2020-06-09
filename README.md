@@ -1,3 +1,5 @@
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # azf-svarut
 
 Durable Azure function that sends letters to [KS SvarUT](https://svarut.ks.no/public/ks-svarut.html).
