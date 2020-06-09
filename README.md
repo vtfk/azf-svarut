@@ -244,7 +244,7 @@ If the state of the function app is ``Running``, you are ready to publish the fu
 
 With all the necessary resources in place, we are now ready to deploy the functions to the function app in Azure.
 
-***Pro tip!*** If you want to sync your local settings, add the flag ``--publish-local-settings``!
+***Pro tip!*** If you want to sync your [local settings](#computer-local-development), add the flag ``--publish-local-settings`` at the end of the command!
 
 ```shell
 $ func azure functionapp publish prod-func-svarut
@@ -257,7 +257,7 @@ $ func azure functionapp publish prod-func-svarut
     [...]
 ```
 
-The function returns a couple of URLs you can use to test your function, so go a head and do that - can't wait to hear how it went! :tada: 
+The function returns a couple of URLs you can use to test your function, so go a head and do that - can't wait to hear how it went! :tada:
 
 Remember to replace the functionname in the ``HttpStart`` function to ``SendLetter`` as described [here](#incoming_envelope-send-new-letter---apisendletter)!
 
