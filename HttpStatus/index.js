@@ -7,7 +7,7 @@ module.exports = async function (context, req) {
   const status = await client.getStatus(instanceId, true)
 
   // Remove input from status object if everything is fine (Completed and Sent)
-  if (status.input && status.runtimeStatus === 'Completed' && status.customStatus === 'Sent') {
+  if (status.input && !(status.runtimeStatus === 'Failed' && status.customStatus === 'Failed')) {
     delete status.input
   }
 
