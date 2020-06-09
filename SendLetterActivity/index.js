@@ -1,4 +1,4 @@
-﻿const config = require('../config')
+const config = require('../config')
 const svarut = require('@vtfk/svarut')(config.SVARUT)
 
 module.exports = async function (context) {
@@ -8,16 +8,14 @@ module.exports = async function (context) {
   try {
     if (Array.isArray(letter.mottaker)) {
       return await Promise.all(letter.mottaker.map(async mottaker => {
-        try {
+        try { // eslint-disable-line
           return await svarut.sendForsendelse({ ...letter, mottaker })
-        }
-        catch (error) {
+        } catch (error) {
           throw error
         }
       }))
     }
-  }
-  catch (error) {
+  } catch (error) {
     if (error.config && error.config.auth) delete error.config.auth
     throw error
   }
