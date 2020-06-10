@@ -11,10 +11,12 @@ module.exports = async function (context, req) {
     delete status.input
   }
 
-  context.res = status ? { body: status } : getStatusResponse(req, client, instanceId)
+  context.res = status ? { body: status, headers: {} } : getStatusResponse(req, client, instanceId)
 
   // Orchestrator is either running, og pending - return 202
   if (status && ['Running', 'Pending'].includes(status.runtimeStatus)) {
     context.res = { ...getStatusResponse(req, client, instanceId), body: status }
   }
+
+  context.res.headers['Content-Type'] = 'application/json; charset=utf-8'
 }

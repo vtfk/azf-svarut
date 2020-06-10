@@ -7,5 +7,6 @@ module.exports = async function (context, req) {
 
   context.log(`Started orchestration with ID = '${instanceId}'.`)
 
-  return getStatusResponse(req, client, instanceId)
+  context.res = getStatusResponse(req, client, instanceId)
+  context.res.headers['Content-Type'] = 'application/json; charset=utf-8'
 }
