@@ -122,7 +122,6 @@ To setup local development, please clone this repository, and install the depenc
       "Values": {
         "AzureWebJobsStorage": "Azure Table Storage connection string",
         "FUNCTIONS_WORKER_RUNTIME": "node",
-        "FUNCTIONS_V2_COMPATIBILITY_MODE": "true",
         "SVARUT_USERNAME": "svarut-username",
         "SVARUT_PASSWORD": "svarut-password",
         "SVARUT_URL": "https://svarut.ks.no",
