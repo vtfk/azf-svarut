@@ -131,8 +131,6 @@ To setup local development, please clone this repository, and install the depenc
     }
     ```
 
-    Add `PAPERTRAIL_HOST` and `PAPERTRAIL_TOKEN` in `local.settings.json` aswell to ship logs to Papertrail
-
 5. When you have all your secrets correctly registered in the `local.settings.json` file, you are ready to start the function for the first time.. Godspeed!
 
     ```shell
