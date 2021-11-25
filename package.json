@@ -21,7 +21,7 @@
   "dependencies": {
     "@vtfk/logger": "4.0.1",
     "@vtfk/svarut": "1.1.1",
-    "durable-functions": "1.4.6"
+    "durable-functions": "1.5.3"
   },
   "devDependencies": {
     "standard": "16.0.3"
