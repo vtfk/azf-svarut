@@ -22,7 +22,7 @@
   "homepage": "https://github.com/vtfk/svarut#readme",
   "dependencies": {
     "@vtfk/svarut": "1.1.1",
-    "durable-functions": "1.4.6"
+    "durable-functions": "1.5.3"
   },
   "devDependencies": {
     "standard": "16.0.4"
