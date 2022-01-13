@@ -11,7 +11,7 @@ module.exports = async function (context, req) {
     delete status.input
   }
 
-  context.res = status ? { body: status, headers: {} } : { status: 404, body: { error: "instanceId not found", instanceId }, headers: {} }
+  context.res = status ? { body: status, headers: {} } : { status: 404, body: { error: 'instanceId not found', instanceId }, headers: {} }
 
   // Orchestrator is either running, og pending - return 202
   if (status && ['Running', 'Pending'].includes(status.runtimeStatus)) {
