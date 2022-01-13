@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard",
     "start": "func start",
     "publish:prod": "func azure functionapp publish prod-func-svarut-v1",
     "publish:test": "func azure functionapp publish test-func-svarut-v1"
