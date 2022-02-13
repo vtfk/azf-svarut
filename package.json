@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/vtfk/svarut#readme",
   "dependencies": {
-    "@vtfk/svarut": "1.1.1",
+    "@vtfk/svarut": "1.2.0",
     "durable-functions": "1.5.4"
   },
   "devDependencies": {
