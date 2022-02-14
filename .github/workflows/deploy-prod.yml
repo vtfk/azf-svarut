@@ -24,9 +24,9 @@ on:
     branches: [main]
 
 env:
-  AZURE_FUNCTIONAPP_NAME: prod-func-svarut-v1    # set this to your application's name
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'                 # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '14.x'                                # set this to the node version to use (supports 8.x, 10.x, 12.x)
+  AZURE_FUNCTIONAPP_NAME: prod-func-svarut-api-v1    # set this to your application's name
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'                # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: '14.x'                               # set this to the node version to use (supports 8.x, 10.x, 12.x)
 
 jobs:
   build-and-deploy:
