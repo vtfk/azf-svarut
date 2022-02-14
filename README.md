@@ -126,10 +126,18 @@ To setup local development, please clone this repository, and install the depenc
         "SVARUT_PASSWORD": "svarut-password",
         "SVARUT_URL": "https://svarut.ks.no",
         "RETRY_ATTEMPTS": 5,
-        "RETRY_WAIT": 10000
+        "RETRY_WAIT": 10000,
+        "E18_URL": "https://e18url.net", // optional
+        "E18_KEY": "secret token", // optional
+        "E18_SYSTEM": "p360", // optional
+        "E18_EMPTY_JOB": true // optional
       }
     }
     ```
+
+    ### E18
+
+    To support [E18](https://github.com/vtfk/e18-node#usage), add `E18_URL`, `E18_KEY` and `E18_SYSTEM`
 
 5. When you have all your secrets correctly registered in the `local.settings.json` file, you are ready to start the function for the first time.. Godspeed!
 

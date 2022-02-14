@@ -3,7 +3,8 @@ const getStatusResponse = require('../lib/get-status-response')
 
 module.exports = async function (context, req) {
   const client = df.getClient(context)
-  const instanceId = await client.startNew(`${req.params.functionName}Orchestrator`, undefined, req.body)
+  // we have to generate the input like this to pass all the info we need
+  const instanceId = await client.startNew(`${req.params.functionName}Orchestrator`, undefined, { body: req.body, headers: req.headers, params: req.params })
 
   context.log(`Started orchestration with ID = '${instanceId}'.`)
 
