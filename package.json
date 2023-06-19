@@ -24,6 +24,6 @@
     "durable-functions": "1.5.4"
   },
   "devDependencies": {
-    "standard": "16.0.4"
+    "standard": "17.1.0"
   }
 }
